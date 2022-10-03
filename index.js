@@ -1,9 +1,34 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  for (let i ; i <= array.length ;i++ ){
+    //n step 
+
+    const complement = target - array[i] 
+    for(let j = i +1; j <array.length ;j++){
+        //n * n  step
+      if(array[j] ===complement) return true 
+    }
+  }
+
+  return false
 }
 
+
+function findStock(array){
+  for(const item of array){
+    if(item === "stock") return "stock"
+  }
+}
+
+function findStock(object) {
+  if(object.sock) return "stock";
+}
 /* 
   Write the Big O time complexity of your function here
+  O( n^2)
+
+  Space Complexity : O(n)
 */
 
 /* 
